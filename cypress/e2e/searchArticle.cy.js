@@ -15,15 +15,12 @@ describe('WTW - Question 2', () => {
             expires : 1717996133099
             }
         
-        const cook = {
-
-            SC_ANALYTICS_GLOBAL_COOKIE: '00d3ab9e565940fdb67f35a799205229|True',
-
-        }
-        
         // Setting all the content to local storage to accept all GDPR preferences 
         localStorage.setItem('truste.eu.cookie.notice_gdpr_prefs', JSON.stringify(todos));
+
+        // Set default cookie to close Alert box
         cy.setCookie('OptanonAlertBoxClosed', '2023-10-16T11:28:49.180Z');
+        
         cy.visit("https://www.wtwco.com/ICT");
     })
 
